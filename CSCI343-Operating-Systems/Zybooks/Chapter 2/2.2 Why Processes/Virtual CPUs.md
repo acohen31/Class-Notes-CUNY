@@ -1,0 +1,11 @@
+- Structuring an app as processes allows independence from the:
+	- Number of CPUs: A physical CPU is a real hardware instance of a CPU. Multiple processes may run on one physical CPU using a technique known as time sharing. Each process is given a virtual CPU: A CPU that the process assumes is available only to itself.
+	- Type of CPU: A virtual CPU can be just an abstraction of the physical CPU or it can be software that emulates the behavior of a different CPU.
+	- ![[Pasted image 20240312161717.png]]
+# Benefits
+- Multi-user support:
+	- Users can share a machine while being invisible to each other
+- Multi-CPU transparency: 
+	- An application written to utilize multiple CPUs will run correctly, although perhaps more slowly, if only one CPU is available.
+- Portability: 
+	- An application compiled for one type of CPU can run on a different CPU without being modified or even recompiled.
